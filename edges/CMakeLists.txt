@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project(edge_project)
+find_package(OpenCV REQUIRED)
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable(edge_project main.cpp)
+target_link_libraries(edge_project ${OpenCV_LIBS})
