@@ -36,7 +36,6 @@ int main( int, char** argv )
 {
   /// Load an image
   src = imread( argv[1], 1 );
-  src = src(cv::Rect(230, 110, 300, 90));
   /// Convert the image to Gray
   cvtColor( src, src_gray, COLOR_RGB2GRAY );
 
@@ -79,7 +78,7 @@ void Threshold_Demo( int, void* )
      4: Threshold to Zero Inverted
    */
 
-  threshold( src_gray, dst, threshold_value, max_BINARY_value,threshold_type );
+  threshold( src, dst, threshold_value, max_BINARY_value,threshold_type );
 
   imshow( window_name, dst );
 }
